@@ -7,6 +7,15 @@ import IntroductionPage from "./_components/introduction";
 import MethodologyPage from "./_components/methodology";
 import logoUnib from "@/assets/images/logo-unib.png";
 import Image from "next/image";
+import { ClockIcon } from "@radix-ui/react-icons";
+import {
+    AcademicCapIcon,
+    BoltSlashIcon,
+    BoltIcon,
+    CubeIcon,
+    StopCircleIcon,
+    StarIcon,
+} from "@heroicons/react/24/outline";
 
 const content = [
     {
@@ -18,16 +27,18 @@ const content = [
                 Lama Studi Mahasiswa
             </div>
         ),
+        icon: <ClockIcon className="size-14" />,
     },
     {
         title: "Masalah Keterlambatan Kelulusan",
         description:
-            "Tingkat kelulusan tepat waktu di banyak perguruan tinggi masih di bawah 50%. Hal ini berdampak negatif pada efisiensi sistem pendidikan, ekonomi mahasiswa, dan reputasi institusi, serta menyebabkan penumpukan mahasiswa.",
+            "Tingkat kelulusan tepat waktu di banyak perguruan tinggi masih di bawah 50%. Hal ini berdampak negatif pada efisiensi sistem pendidikan, ekonomi mahasiswa, dan reputasi institusi.",
         content: (
             <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--red-500),var(--orange-500))] flex items-center justify-center text-white">
                 Masalah Keterlambatan Kelulusan
             </div>
         ),
+        icon: <AcademicCapIcon className="size-14" />,
     },
     {
         title: "Keterbatasan Solusi Konvensional",
@@ -38,6 +49,7 @@ const content = [
                 Keterbatasan Solusi Konvensional
             </div>
         ),
+        icon: <BoltSlashIcon className="size-14" />,
     },
     {
         title: "Pendekatan Baru: Machine Learning",
@@ -48,6 +60,7 @@ const content = [
                 Pendekatan Baru: Machine Learning
             </div>
         ),
+        icon: <BoltIcon className="size-14" />,
     },
     {
         title: "Fokus Penelitian",
@@ -58,6 +71,7 @@ const content = [
                 Fokus Penelitian
             </div>
         ),
+        icon: <CubeIcon className="size-14" />,
     },
     {
         title: "Tujuan Penelitian",
@@ -68,6 +82,7 @@ const content = [
                 Tujuan Penelitian
             </div>
         ),
+        icon: <StopCircleIcon className="size-14" />,
     },
     {
         title: "Signifikansi Penelitian",
@@ -78,6 +93,7 @@ const content = [
                 Signifikansi Penelitian
             </div>
         ),
+        icon: <StarIcon className="size-14" />,
     },
 ];
 export default function ProposalPage() {

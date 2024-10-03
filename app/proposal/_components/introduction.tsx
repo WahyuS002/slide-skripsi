@@ -13,6 +13,7 @@ export default function IntroductionPage({
         title: string;
         description: string;
         content?: React.ReactNode | any;
+        icon: React.ReactNode;
     }[];
     contentClassName?: string;
 }) {
@@ -93,8 +94,16 @@ export default function IntroductionPage({
                     contentClassName,
                 )}
             >
-                {content[activeCard].content ?? null}
+                <div className="flex h-full justify-center items-center text-white">{content[activeCard].icon}</div>
             </div>
         </motion.div>
+    );
+}
+
+function IconWrapper({ icon: Icon }: { icon: React.ComponentType<React.SVGProps<SVGSVGElement>> }) {
+    return (
+        <div className="flex items-center justify-center w-full h-full">
+            <Icon className="size-24 text-white" />
+        </div>
     );
 }
